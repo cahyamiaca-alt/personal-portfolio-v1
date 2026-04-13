@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #00abf0;
+    --bg-color: #080808;
+    --card-bg: #111111;
+    --text-color: #ffffff;
+    --second-text-color: #b0b0b0;
+    --main-glow: rgba(0, 171, 240, 0.3);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 171, 240, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 171, 240, 0.08) 0px, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    color: var(--text-color);
+}
+
+/* HEADER & NAVBAR */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: rgba(8, 8, 8, 0.85); 
+    backdrop-filter: blur(10px); 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000; 
+    border-bottom: 1px solid rgba(0, 171, 240, 0.1);
+}
+
+nav a{
+    font-size: 2.5rem;
+    color: white;
+    margin-right: 3.5rem;
+    font-weight: 500;
+    transition: 0.4s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* EXPERIENCE SECTION */
+#experience {
+    min-height: 100vh;
+    padding: 18rem 9% 10rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-shadow: 0 0 15px var(--main-glow);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    padding-left: 6rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -7.1rem;
+    top: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: var(--main-color);
+    border: 0.4rem solid var(--bg-color);
+    border-radius: 50%;
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+.timeline-date {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 4rem;
+    border-radius: 2.5rem;
+    border: 1px solid #222;
+    transition: 0.4s ease;
+}
+
+.timeline-content:hover {
+    border-color: var(--main-color);
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 171, 240, 0.15);
+}
+
+.timeline-content h3 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    color: var(--main-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.timeline-content p {
+    font-size: 1.8rem;
+    color: var(--second-text-color);
+    line-height: 1.7;
+}
+
+.tags {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.tags span {
+    background-color: rgba(0, 171, 240, 0.1);
+    color: var(--main-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: 1px solid var(--main-color);
+}
+
+/* FOOTER STYLING */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 9%;
+    background: var(--card-bg);
+    border-top: 1px solid rgba(0, 171, 240, 0.1);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: var(--main-color);
+    border-radius: 0.8rem;
+    transition: 0.5s ease;
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
